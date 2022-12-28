@@ -36,4 +36,4 @@ jobs:
         docker build -t juice_shop .
         ${GITHUB_WORKSPACE}/sl analyze --app juice-shop-linux --tag branch=${GITHUB_REF} --wait --js --container juice_shop --cpg . -- --with-tests --include-configs --exclude node_modules,frontend/dist,frontend/node_modules,vagrant,dist,data/static,build --optimize-dependencies
       env:
-        SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
+        DEFAULT: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
